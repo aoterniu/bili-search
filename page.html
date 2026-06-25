@@ -1,9 +1,4 @@
-/**
- * B 站快捷搜索 - 稳定版
- * 直接跳转到 B 站搜索结果页
- */
-
-const HTML = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +41,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 @media(max-width:640px){.header h1{font-size:28px}.category-grid{grid-template-columns:repeat(2,1fr)}.search-box{flex-direction:column}}
 </style>
 </head>
-<body>
+<body><a href="https://bili.aoterniu.online/cdn-cgi/content?id=FW5LvcFQn8b9rfKmVbAmFvnK84ZKEQlHmknwB3Yu2A8-1782404703.60248-1.2.1.1-pm9q7zzQehPLNHubSEm_9E7ijRxhJQ9twXQiZ5xsX4U" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
 <nav class="nav">
   <div class="nav-logo">📺 B 站快捷搜索</div>
   <div class="nav-links">
@@ -199,15 +194,5 @@ searchBtn.addEventListener('click', doSearch);
 keywordInput.addEventListener('keypress', function(e) { if (e.key === 'Enter') doSearch(); });
 loadHistory();
 </script>
-</body>
-</html>`;
-
-export default {
-  async fetch(request) {
-    const url = new URL(request.url);
-    if (url.pathname === '/' || url.pathname === '') {
-      return new Response(HTML, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
-    }
-    return new Response('Not Found', { status: 404 });
-  }
-};
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a11553758a6bcf22',t:'MTc4MjQwNDcwMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
