@@ -1,0 +1,8 @@
+name = "bili-search"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+workers_dev = false
+
+routes = [
+  { pattern = "bili.aoterniu.online/*", zone_name = "aoterniu.online" }
+]
